@@ -11,6 +11,20 @@
 		ED0DCE9D1DB09089007402E1 /* TMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0DCE8F1DB09088007402E1 /* TMCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED0DCEA81DB09270007402E1 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */; };
 		ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA91DB094E8007402E1 /* Demo.swift */; };
+		ED0DCEAD1DB09D21007402E1 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEAC1DB09D21007402E1 /* Property.swift */; };
+		ED0DCEAF1DB0A13E007402E1 /* HelpingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEAE1DB0A13E007402E1 /* HelpingMapper.swift */; };
+		ED0DCEB11DB0B195007402E1 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEB01DB0B195007402E1 /* Converter.swift */; };
+		ED0DCEB31DB0B79A007402E1 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEB21DB0B79A007402E1 /* JSONSerializer.swift */; };
+		ED0DCEB51DB0B7A4007402E1 /* JSONDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEB41DB0B7A4007402E1 /* JSONDeserializer.swift */; };
+		ED0DCEB81DB0C26E007402E1 /* StructObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEB71DB0C26E007402E1 /* StructObjectTest.swift */; };
+		ED0FDB781DB0F9170088E163 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB771DB0F9170088E163 /* Extension.swift */; };
+		ED0FDB7C1DB102120088E163 /* ClassObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB7B1DB102120088E163 /* ClassObjectTest.swift */; };
+		ED0FDB7E1DB102660088E163 /* NestObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB7D1DB102660088E163 /* NestObjectTest.swift */; };
+		ED0FDB801DB102E20088E163 /* CustomMappingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB7F1DB102E20088E163 /* CustomMappingTest.swift */; };
+		ED0FDB821DB103360088E163 /* ObjectiveCObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB811DB103360088E163 /* ObjectiveCObjectTest.swift */; };
+		ED0FDB841DB103660088E163 /* MemoryLayoutValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB831DB103660088E163 /* MemoryLayoutValidationTest.swift */; };
+		ED0FDB861DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB851DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift */; };
+		ED0FDB881DB103E10088E163 /* serializeToJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB871DB103E10088E163 /* serializeToJSONTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +45,20 @@
 		ED0DCE9C1DB09089007402E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		ED0DCEA91DB094E8007402E1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
+		ED0DCEAC1DB09D21007402E1 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		ED0DCEAE1DB0A13E007402E1 /* HelpingMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpingMapper.swift; sourceTree = "<group>"; };
+		ED0DCEB01DB0B195007402E1 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		ED0DCEB21DB0B79A007402E1 /* JSONSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
+		ED0DCEB41DB0B7A4007402E1 /* JSONDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDeserializer.swift; sourceTree = "<group>"; };
+		ED0DCEB71DB0C26E007402E1 /* StructObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructObjectTest.swift; sourceTree = "<group>"; };
+		ED0FDB771DB0F9170088E163 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		ED0FDB7B1DB102120088E163 /* ClassObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassObjectTest.swift; sourceTree = "<group>"; };
+		ED0FDB7D1DB102660088E163 /* NestObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestObjectTest.swift; sourceTree = "<group>"; };
+		ED0FDB7F1DB102E20088E163 /* CustomMappingTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMappingTest.swift; sourceTree = "<group>"; };
+		ED0FDB811DB103360088E163 /* ObjectiveCObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCObjectTest.swift; sourceTree = "<group>"; };
+		ED0FDB831DB103660088E163 /* MemoryLayoutValidationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryLayoutValidationTest.swift; sourceTree = "<group>"; };
+		ED0FDB851DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBaseTypePropertyObjectTest.swift; sourceTree = "<group>"; };
+		ED0FDB871DB103E10088E163 /* serializeToJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serializeToJSONTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +101,7 @@
 		ED0DCE8E1DB09088007402E1 /* TMCommon */ = {
 			isa = PBXGroup;
 			children = (
+				ED0DCEAB1DB09C49007402E1 /* JSON */,
 				ED0DCE8F1DB09088007402E1 /* TMCommon.h */,
 				ED0DCE901DB09088007402E1 /* Info.plist */,
 				ED0DCEA91DB094E8007402E1 /* Demo.swift */,
@@ -83,10 +112,39 @@
 		ED0DCE991DB09088007402E1 /* TMCommonTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED0DCEB61DB0C253007402E1 /* JSON */,
 				ED0DCE9C1DB09089007402E1 /* Info.plist */,
 				ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */,
 			);
 			path = TMCommonTests;
+			sourceTree = "<group>";
+		};
+		ED0DCEAB1DB09C49007402E1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				ED0DCEAC1DB09D21007402E1 /* Property.swift */,
+				ED0DCEAE1DB0A13E007402E1 /* HelpingMapper.swift */,
+				ED0DCEB01DB0B195007402E1 /* Converter.swift */,
+				ED0DCEB21DB0B79A007402E1 /* JSONSerializer.swift */,
+				ED0DCEB41DB0B7A4007402E1 /* JSONDeserializer.swift */,
+				ED0FDB771DB0F9170088E163 /* Extension.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		ED0DCEB61DB0C253007402E1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				ED0DCEB71DB0C26E007402E1 /* StructObjectTest.swift */,
+				ED0FDB7B1DB102120088E163 /* ClassObjectTest.swift */,
+				ED0FDB7D1DB102660088E163 /* NestObjectTest.swift */,
+				ED0FDB7F1DB102E20088E163 /* CustomMappingTest.swift */,
+				ED0FDB811DB103360088E163 /* ObjectiveCObjectTest.swift */,
+				ED0FDB831DB103660088E163 /* MemoryLayoutValidationTest.swift */,
+				ED0FDB851DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift */,
+				ED0FDB871DB103E10088E163 /* serializeToJSONTests.swift */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0DCEB31DB0B79A007402E1 /* JSONSerializer.swift in Sources */,
+				ED0DCEAD1DB09D21007402E1 /* Property.swift in Sources */,
+				ED0FDB781DB0F9170088E163 /* Extension.swift in Sources */,
+				ED0DCEAF1DB0A13E007402E1 /* HelpingMapper.swift in Sources */,
+				ED0DCEB11DB0B195007402E1 /* Converter.swift in Sources */,
+				ED0DCEB51DB0B7A4007402E1 /* JSONDeserializer.swift in Sources */,
 				ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,7 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0FDB861DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift in Sources */,
+				ED0FDB7E1DB102660088E163 /* NestObjectTest.swift in Sources */,
 				ED0DCEA81DB09270007402E1 /* BaseTestCase.swift in Sources */,
+				ED0FDB881DB103E10088E163 /* serializeToJSONTests.swift in Sources */,
+				ED0FDB821DB103360088E163 /* ObjectiveCObjectTest.swift in Sources */,
+				ED0FDB7C1DB102120088E163 /* ClassObjectTest.swift in Sources */,
+				ED0FDB841DB103660088E163 /* MemoryLayoutValidationTest.swift in Sources */,
+				ED0DCEB81DB0C26E007402E1 /* StructObjectTest.swift in Sources */,
+				ED0FDB801DB102E20088E163 /* CustomMappingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

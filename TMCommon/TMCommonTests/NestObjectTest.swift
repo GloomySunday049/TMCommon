@@ -1,0 +1,134 @@
+//
+//  NestObjectTest.swift
+//  TMCommon
+//
+//  Created by 孟钰丰 on 2016/10/14.
+//  Copyright © 2016年 Petsknow. All rights reserved.
+//
+
+import XCTest
+import TMCommon
+
+class NestObjectTest: BaseTestCase {
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    enum Gender: String, TMJSON {
+        case Male = "Male"
+        case Female = "Female"
+        
+        init() {
+            self = .Male
+        }
+    }
+    
+    class Teacher: TMJSON {
+        var name: String?
+        var age: Int?
+        var height: Int?
+        var gender: Gender?
+        
+        required init() {}
+        
+        func mapping(mapper: HelpingMapper) {
+            mapper.specify(property: &gender) {
+                print("gender", $0)
+                return Gender(rawValue: $0)
+            }
+        }
+    }
+    
+    struct Subject: TMJSON {
+        var name: String?
+        var id: Int64?
+        var credit: Int?
+        var lessonPeriod: Int?
+    }
+    
+    class Student: TMJSON {
+        var id: String?
+        var name: String?
+        var age: Int?
+        var height: Int?
+        var gender: Gender?
+        var className: String?
+        var teacher: Teacher?
+        var subject: [Subject]?
+        var seat: String?
+        
+        required init() {}
+        
+        func mapping(mapper: HelpingMapper) {
+            mapper.specify(property: &gender) {
+                return Gender(rawValue: $0)
+            }
+        }
+    }
+    
+    func testNormalNestObject() {
+        /**
+         {
+         "id": "77544",
+         "name": "Tom Li",
+         "age": 18,
+         "height": 180,
+         "gender": "Male",
+         "className": "A",
+         "teacher": {
+         "name": "Lucy He",
+         "age": 28,
+         "height": 172,
+         "gender": "Female",
+         },
+         "subject": [
+         {
+         "name": "math",
+         "id": 18000324583,
+         "credit": 4,
+         "lessonPeriod": 48
+         },
+         {
+         "name": "computer",
+         "id": 18000324584,
+         "credit": 8,
+         "lessonPeriod": 64
+         }
+         ],
+         "seat": "4-3-23"
+         }
+         **/
+        let jsonString = "{\"id\":\"77544\",\"name\":\"Tom Li\",\"age\":18,\"height\":180,\"gender\":\"Male\",\"className\":\"A\",\"teacher\":{\"name\":\"Lucy He\",\"age\":28,\"height\":172,\"gender\":\"Female\",},\"subject\":[{\"name\":\"math\",\"id\":18000324583,\"credit\":4,\"lessonPeriod\":48},{\"name\":\"computer\",\"id\":18000324584,\"credit\":8,\"lessonPeriod\":64}],\"seat\":\"4-3-23\"}"
+        guard let student = JSONDeserializer<Student>.deserializeFrom(json: jsonString) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(student.id == "77544")
+        XCTAssert(student.name == "Tom Li")
+        XCTAssert(student.age == 18)
+        XCTAssert(student.height == 180)
+        XCTAssert(student.gender == .Male)
+        XCTAssert(student.className == "A")
+        XCTAssert(student.teacher?.name == "Lucy He")
+        XCTAssert(student.teacher?.age == 28)
+        XCTAssert(student.teacher?.height == 172)
+        XCTAssert(student.teacher?.gender == .Female)
+        XCTAssert(student.subject?.first?.name == "math")
+        XCTAssert(student.subject?.first?.id == 18000324583)
+        XCTAssert(student.subject?.first?.credit == 4)
+        XCTAssert(student.subject?.first?.lessonPeriod == 48)
+        XCTAssert(student.subject?.last?.name == "computer")
+        XCTAssert(student.subject?.last?.id == 18000324584)
+        XCTAssert(student.subject?.last?.credit == 8)
+        XCTAssert(student.subject?.last?.lessonPeriod == 64)
+        XCTAssert(student.seat == "4-3-23")
+    }
+    
+}
