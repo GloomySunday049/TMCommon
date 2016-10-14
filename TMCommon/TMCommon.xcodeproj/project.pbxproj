@@ -10,6 +10,7 @@
 		ED0DCE961DB09088007402E1 /* TMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0DCE8C1DB09088007402E1 /* TMCommon.framework */; };
 		ED0DCE9D1DB09089007402E1 /* TMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0DCE8F1DB09088007402E1 /* TMCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED0DCEA81DB09270007402E1 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */; };
+		ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA91DB094E8007402E1 /* Demo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		ED0DCE951DB09088007402E1 /* TMCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0DCE9C1DB09089007402E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
+		ED0DCEA91DB094E8007402E1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				ED0DCE8F1DB09088007402E1 /* TMCommon.h */,
 				ED0DCE901DB09088007402E1 /* Info.plist */,
+				ED0DCEA91DB094E8007402E1 /* Demo.swift */,
 			);
 			path = TMCommon;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					ED0DCE8B1DB09088007402E1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = FB2Y33TQXG;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					ED0DCE941DB09088007402E1 = {
@@ -199,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +328,7 @@
 		ED0DCEA11DB09089007402E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FB2Y33TQXG;
@@ -336,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.petsknow.TMCommon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +350,7 @@
 		ED0DCEA21DB09089007402E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FB2Y33TQXG;
@@ -363,6 +371,7 @@
 		ED0DCEA41DB09089007402E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FB2Y33TQXG;
 				INFOPLIST_FILE = TMCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -375,6 +384,7 @@
 		ED0DCEA51DB09089007402E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = FB2Y33TQXG;
 				INFOPLIST_FILE = TMCommonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -403,6 +413,7 @@
 				ED0DCEA21DB09089007402E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED0DCEA31DB09089007402E1 /* Build configuration list for PBXNativeTarget "TMCommonTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +422,7 @@
 				ED0DCEA51DB09089007402E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
