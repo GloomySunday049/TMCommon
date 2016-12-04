@@ -48,6 +48,14 @@ public protocol TMJSON : TranslatePropertiable {
 
 public extension TMJSON {
     public mutating func mapping(mapper: HelpingMapper) {}
+    
+    public func deserializeFrom(json: String?) -> Self? {
+        if let json = json {
+            return JSONDeserializer<Self>.deserializeFrom(json: json)
+        } else {
+            return nil
+        }
+    }
 }
 
 protocol  BasePropertyProtocol: TMJSON {

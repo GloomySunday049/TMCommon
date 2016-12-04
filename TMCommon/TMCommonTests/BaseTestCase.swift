@@ -11,10 +11,25 @@ import TMCommon
 import Foundation
 
 class BaseTestCase: XCTestCase {
+    let timeout: TimeInterval = 30
+    
+    static var testDirectoryURL: URL { return FileManager.temporaryDirectoryURL.appendingPathComponent("cn.petsknow.tests") }
+    var testDirectoryURL: URL { return BaseTestCase.testDirectoryURL }
+    
+    override func startMeasuring() {
+        
+    }
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        FileManager.removeAllItemInsideDirectory(at: testDirectoryURL)
+        FileManager.createDirectory(at: testDirectoryURL)
+    }
+    
+    func url(forResource fileName: String, withExtension ext: String) -> URL {
+        let bundle = Bundle(for: BaseTestCase.self)
+        return bundle.url(forResource: fileName, withExtension: ext)!
     }
     
 }
