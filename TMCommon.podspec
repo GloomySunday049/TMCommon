@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "TMCommon"
-  s.version  = "0.0.1"
+  s.version  = "0.0.2"
   s.license = 'MIT'
   s.summary = "A Common For App By TM"
   s.homepage = "https://github.com/GloomySunday049/TMCommon"

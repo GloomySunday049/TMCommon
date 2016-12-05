@@ -8,11 +8,12 @@
 
 import Foundation
 
-public class APIRet<T: TMJSON>: TMJSON {
-    var status: Int = 0
-    var data: [T] = []
-    var msg: String = ""
-    var time: Double = 0.0
+public protocol APIRetProtocol: TMJSON {
     
-    required public init() {}
+    associatedtype T
+    
+    var status: Int { get set}
+    var data: [T] { get set}
+    var msg: String { get set}
+    var time: Double { get set}
 }

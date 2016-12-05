@@ -1205,18 +1205,18 @@ class DownloadResponseSerializationTestCase: BaseTestCase {
     func test___() {
         let parameters = ["phone": "18518167049", "verifyCode" : "914466"]
         
-        APIUtil<APIRet<UserModel>>.loadAPI(uri: "user/login", method: HTTPMethod.post, parameter: parameters) { (rs) in
-            
-        }
+//        APIUtil<APIRetModel<UserModel>>.loadAPI(uri: "user/login", method: HTTPMethod.post, parameter: parameters) { (rs) in
+//            
+//        }
         // Given
 //        let urlString = "http://60.205.108.157/ywt_api/user/login"
 //        
         let expectation = self.expectation(description: "request should succeed")
         
-        var response: DataResponse<APIRet<UserModel>?>?
+        var response: DataResponse<APIRetModel<UserModel>?>?
         
         
-        APIUtil<APIRet<UserModel>>.loadAPI(uri: "user/login", method: HTTPMethod.post, parameter: parameters) { (rs) in
+        APIUtil<APIRetModel<UserModel>>.loadAPI(uri: "http://60.205.108.157/ywt_api/user/login", method: HTTPMethod.post, parameter: parameters, headers: ["phone" : "18518167049", "token" : "73e10132b3b035f1bb910c61f2d9ba05"]) { (rs) in
 //            response = rs
             print(rs)
             expectation.fulfill()
@@ -1229,15 +1229,15 @@ class DownloadResponseSerializationTestCase: BaseTestCase {
     }
 }
 
-//class APIRet<T: TMJSON>: TMJSON {
-//    var status: Int = 0
-//    var data: [T] = []
-//    var msg: String = ""
-//    var time: Double = 0.0
-//    
-//    required init() {
-//    }
-//}
+class APIRetModel<T: TMJSON>: APIRetProtocol {
+    var status: Int = 0
+    var data: [T] = []
+    var msg: String = ""
+    var time: Double = 0.0
+    
+    required init() {
+    }
+}
 //
 ////{
 ////    "expireTime": 1512192062000,
@@ -1246,14 +1246,14 @@ class DownloadResponseSerializationTestCase: BaseTestCase {
 ////    "token": "2ed8b50ec52c562fa052d02ef5aaff76"
 ////}
 //
-//class UserModel: TMJSON {
-//    var expireTime: Double = 0.0
-//    var id: Int = 0
-//    var phone: String = ""
-//    var token: String = ""
-//    
-//    
-//    required init() {
-//        
-//    }
-//}
+class UserModel: TMJSON {
+    var expireTime: Double = 0.0
+    var id: Int = 0
+    var phone: String = ""
+    var token: String = ""
+    
+    
+    required init() {
+        
+    }
+}
