@@ -10,7 +10,6 @@
 		ED0DCE961DB09088007402E1 /* TMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0DCE8C1DB09088007402E1 /* TMCommon.framework */; };
 		ED0DCE9D1DB09089007402E1 /* TMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = ED0DCE8F1DB09088007402E1 /* TMCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED0DCEA81DB09270007402E1 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */; };
-		ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEA91DB094E8007402E1 /* Demo.swift */; };
 		ED0DCEAD1DB09D21007402E1 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEAC1DB09D21007402E1 /* Property.swift */; };
 		ED0DCEAF1DB0A13E007402E1 /* HelpingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEAE1DB0A13E007402E1 /* HelpingMapper.swift */; };
 		ED0DCEB11DB0B195007402E1 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DCEB01DB0B195007402E1 /* Converter.swift */; };
@@ -70,7 +69,6 @@
 		ED0DCE951DB09088007402E1 /* TMCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0DCE9C1DB09089007402E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0DCEA71DB09270007402E1 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
-		ED0DCEA91DB094E8007402E1 /* Demo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Demo.swift; sourceTree = "<group>"; };
 		ED0DCEAC1DB09D21007402E1 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		ED0DCEAE1DB0A13E007402E1 /* HelpingMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpingMapper.swift; sourceTree = "<group>"; };
 		ED0DCEB01DB0B195007402E1 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				EDCEA4E31DB2507A00E5EC60 /* Extensions */,
 				ED0DCE8F1DB09088007402E1 /* TMCommon.h */,
 				ED0DCE901DB09088007402E1 /* Info.plist */,
-				ED0DCEA91DB094E8007402E1 /* Demo.swift */,
 			);
 			path = TMCommon;
 			sourceTree = "<group>";
@@ -428,7 +425,6 @@
 				ED7D1E041DB5F0A0007A72C0 /* Response.swift in Sources */,
 				EDCEA4EA1DB2523300E5EC60 /* NTNetwork.swift in Sources */,
 				ED7D1E021DB5EEE3007A72C0 /* ResponseSerialization.swift in Sources */,
-				ED0DCEAA1DB094E8007402E1 /* Demo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

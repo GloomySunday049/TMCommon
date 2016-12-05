@@ -308,7 +308,6 @@ extension Request {
         }
         
         do {
-            let s = String(data: validData, encoding: String.Encoding.utf8)
             let json = try JSONSerialization.jsonObject(with: validData, options: options)
             return .success(json)
         } catch {
