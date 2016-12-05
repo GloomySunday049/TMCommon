@@ -258,7 +258,7 @@ extension DownloadRequest {
     }
 }
 
-// MARK: Model - Json
+// MARK: Model - JSON
 
 extension Request {
     
