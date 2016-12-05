@@ -26,6 +26,8 @@
 		ED0FDB861DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB851DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift */; };
 		ED0FDB881DB103E10088E163 /* serializeToJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0FDB871DB103E10088E163 /* serializeToJSONTests.swift */; };
 		ED1340D71DF2E2F90036677C /* ResponseSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1340D61DF2E2F90036677C /* ResponseSerializationTests.swift */; };
+		ED3572491DF5111A00F1C84D /* APIUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3572481DF5111A00F1C84D /* APIUtil.swift */; };
+		ED35724B1DF513AA00F1C84D /* APIRet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED35724A1DF513AA00F1C84D /* APIRet.swift */; };
 		ED6B21061DB4F69100022779 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B21051DB4F69100022779 /* SessionDelegate.swift */; };
 		ED6B21081DB4F71F00022779 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B21071DB4F71F00022779 /* ParameterEncoding.swift */; };
 		ED6B210A1DB4F7B300022779 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6B21091DB4F7B300022779 /* ServerTrustPolicy.swift */; };
@@ -84,6 +86,8 @@
 		ED0FDB851DB103A30088E163 /* AllBaseTypePropertyObjectTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllBaseTypePropertyObjectTest.swift; sourceTree = "<group>"; };
 		ED0FDB871DB103E10088E163 /* serializeToJSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serializeToJSONTests.swift; sourceTree = "<group>"; };
 		ED1340D61DF2E2F90036677C /* ResponseSerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerializationTests.swift; sourceTree = "<group>"; };
+		ED3572481DF5111A00F1C84D /* APIUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUtil.swift; sourceTree = "<group>"; };
+		ED35724A1DF513AA00F1C84D /* APIRet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRet.swift; sourceTree = "<group>"; };
 		ED6B21051DB4F69100022779 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		ED6B21071DB4F71F00022779 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		ED6B21091DB4F7B300022779 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 				EDCEA4D71DB2350F00E5EC60 /* Core */,
 				EDCEA4E61DB251DF00E5EC60 /* Features */,
 				EDCEA4E91DB2523300E5EC60 /* NTNetwork.swift */,
+				ED3572481DF5111A00F1C84D /* APIUtil.swift */,
+				ED35724A1DF513AA00F1C84D /* APIRet.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				ED6B21101DB4F84C00022779 /* Result.swift in Sources */,
 				ED6B21061DB4F69100022779 /* SessionDelegate.swift in Sources */,
 				ED6F91FB1DB49EDE0032B981 /* TaskDelegate.swift in Sources */,
+				ED3572491DF5111A00F1C84D /* APIUtil.swift in Sources */,
 				ED6B210A1DB4F7B300022779 /* ServerTrustPolicy.swift in Sources */,
 				ED6F91FD1DB4BCEF0032B981 /* SessionManager.swift in Sources */,
 				ED0DCEAD1DB09D21007402E1 /* Property.swift in Sources */,
@@ -416,6 +423,7 @@
 				ED7D1E0B1DB765BF007A72C0 /* ReachabilityManager.swift in Sources */,
 				ED0DCEB11DB0B195007402E1 /* Converter.swift in Sources */,
 				ED6B21081DB4F71F00022779 /* ParameterEncoding.swift in Sources */,
+				ED35724B1DF513AA00F1C84D /* APIRet.swift in Sources */,
 				ED0DCEB51DB0B7A4007402E1 /* JSONDeserializer.swift in Sources */,
 				ED7D1E041DB5F0A0007A72C0 /* Response.swift in Sources */,
 				EDCEA4EA1DB2523300E5EC60 /* NTNetwork.swift in Sources */,
