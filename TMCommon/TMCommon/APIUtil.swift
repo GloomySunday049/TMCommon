@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import HandyJSON
+import Alamofire
 
-public class APIUtil<T: TMJSON> {
+public class APIUtil<T: HandyJSON> {
     
-    public static func loadAPI(uri: String, method: HTTPMethod, parameter: Parameters?, headers: HTTPHeaders?, completionHandler: @escaping (T?) -> Void) {
+    public static func loadAPI(url: String, method: HTTPMethod, parameter: Parameters?, headers: HTTPHeaders?, completionHandler: @escaping (T?) -> Void) {
         switch method {
         case .get:
-            _data(uri, method: method, parameters: parameter, encoding: URLEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>?) in
-                print(rs?.result.isSuccess)
-                if rs?.result.isSuccess ?? false {
-                    if let vlaue = rs?.result.value {
+            request(url, method: method, parameters: parameter, encoding: URLEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
+                if rs.result.isSuccess {
+                    if let vlaue = rs.result.value {
                         completionHandler(vlaue)
                     } else {
                         completionHandler(nil)
@@ -26,10 +27,9 @@ public class APIUtil<T: TMJSON> {
                 }
             })
         case .post:
-            _data(uri, method: method, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>?) in
-                print(rs?.result.isSuccess)
-                if rs?.result.isSuccess ?? false {
-                    if let vlaue = rs?.result.value {
+            request(url, method: method, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
+                if rs.result.isSuccess {
+                    if let vlaue = rs.result.value {
                         completionHandler(vlaue)
                     } else {
                         completionHandler(nil)

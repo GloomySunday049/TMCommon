@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import HandyJSON
 
-public protocol APIRetProtocol: TMJSON {
+public protocol APIRetProtocol: HandyJSON {
     
     associatedtype T
     

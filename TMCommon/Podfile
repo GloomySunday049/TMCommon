@@ -1,0 +1,7 @@
+platform :ios ,’8.0’
+
+use_frameworks!
+target “TMCommon” do
+pod 'Alamofire', '~> 4.2.0'
+pod 'HandyJSON', '~> 1.3.0'
+end
