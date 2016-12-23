@@ -10,12 +10,21 @@ import Foundation
 import HandyJSON
 import Alamofire
 
+class CustomManager {
+    
+    static let share: CustomManager = CustomManager()
+    
+    let manager = SessionManager(configuration: URLSessionConfiguration.default, serverTrustPolicyManager: ServerTrustPolicyManager(policies: ["appapi.yiwantang.net" : .disableEvaluation]))
+    
+    internal required init() {}
+}
+
 public class APIUtil<T: HandyJSON> {
     
     public static func loadAPI(url: String, method: HTTPMethod, parameter: Parameters?, headers: HTTPHeaders?, completionHandler: @escaping (T?) -> Void) {
         switch method {
         case .get:
-            request(url, method: method, parameters: parameter, encoding: URLEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
+            CustomManager.share.manager.request(url, method: method, parameters: parameter, encoding: URLEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
                 if rs.result.isSuccess {
                     if let vlaue = rs.result.value {
                         completionHandler(vlaue)
@@ -27,7 +36,7 @@ public class APIUtil<T: HandyJSON> {
                 }
             })
         case .post:
-            request(url, method: method, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
+            CustomManager.share.manager.request(url, method: method, parameters: parameter, encoding: JSONEncoding.default, headers: headers).responseModel(completionHandler: { (rs: DataResponse<T?>) in
                 if rs.result.isSuccess {
                     if let vlaue = rs.result.value {
                         completionHandler(vlaue)
